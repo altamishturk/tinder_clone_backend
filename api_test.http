@@ -1,0 +1,9 @@
+# POST http://localhost:8000/tinder/cards HTTP/1.1
+# Content-Type: application/json
+
+# {
+#     "name":"altamish turk",
+#     "imgURL": "https://wizcounsel.s3.amazonaws.com/avatars/professionalprofile/10961/altamish_pro.JPG"
+# }
+
+# GET http://localhost:8000/tinder/cards HTTP/1.1
