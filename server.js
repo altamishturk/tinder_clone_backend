@@ -2,9 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Cards = require('./model/dbCards.js');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
 
-// app config 
+// app config
+dotenv.config({ path: '.env' });
 const app = express();
 const port = process.env.PORT || 8000;
 
@@ -14,7 +16,7 @@ app.use(cors());
 
 
 // db config 
-const db_url = 'mongodb+srv://altamish:ALTa%408684864632@cluster0.pfp94.mongodb.net/tinder_clone_db?retryWrites=true&w=majority'
+const db_url = process.env.db_url;
 
 mongoose.connect(db_url)
     .then((conn) => {
